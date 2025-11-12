@@ -1,2 +1,3 @@
 # everybodycodes-AdvOfCode
-To get used to Swift
+
+Just for fun :)
