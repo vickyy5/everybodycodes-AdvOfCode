@@ -21,6 +21,29 @@ def part1():
     s = sum([ int(i) for i in amb])
     print(s)
 
+def part2():
+    with open('test.in','r') as f:
+        arr = [ i.strip() for i in f]
+
+
+    amb=[]
+    for line in arr:
+        al = [ int(i) for i in line]
+        al.sort(key=None, reverse=True)
+        na=al[:12]
+        #print(na)
+        posa = []
+        while len(posa) != 12:
+            for i,n in enumerate(line):
+                if str(al[i]) in line:
+                    if i in posa:
+                        continue
+                    posa.append(i)
+        print(posa)
+
+
+    #s = sum([ int(i) for i in amb])
+    #print(s)
 
 def getMaxBat(line):
     mx = 0
@@ -37,4 +60,5 @@ def getMaxBat(line):
     
     
     
-part1()
+#part1()
+part2()
